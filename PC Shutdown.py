@@ -5,9 +5,9 @@ To convert to EXE:
     3. open source directory
     4. open CMD using the address bar
     5. enter and run:
-    pyinstaller --onefile --noconsole "PC Shutdown.py"
+    pyinstaller --onefile --noconsole "PC Shutdown.py" --icon "icon.png"
     or
-    pyinstaller --noconfirm --onedir --windowed --contents-directory "PC Shutdown" --icon "icon.png"  "PC Shutdown.py"
+    pyinstaller --noconfirm --onedir --windowed --contents-directory "PC Shutdown" --icon "transparent.png"  "PC Shutdown.py"
 """
 
 

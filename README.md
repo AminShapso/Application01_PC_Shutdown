@@ -6,6 +6,11 @@ For the dropdown menu to be selected, leave the text field empty.
 The shutdown is set using the Command Prompt.
 
 
+## Screenshot
+
+<img src="screenshot.png" width="360" alt="screenshot">
+
+
 
 ## Requirements
 

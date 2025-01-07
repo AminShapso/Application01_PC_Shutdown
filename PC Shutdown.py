@@ -56,11 +56,11 @@ def shutdown_computer():
     global enable_shutdown
     cancel_shutdown()
     if os.name == 'nt':     # For Windows operating system
-        if entry.get().isdecimal():
-            timer = int(entry.get())
+        try:
+            timer = float(entry.get())
             multiple = 60
-        else:
-            timer = int(clicked.get().split(' ')[0])
+        except ValueError:
+            timer = float(clicked.get().split(' ')[0])
             multiple = clicked.get().split(' ')[1]
             if multiple[:6] == "minute":
                 multiple = 60
@@ -69,6 +69,7 @@ def shutdown_computer():
             else:
                 multiple = 1
         timer *= multiple
+        timer = int(timer)
         os.system(f'shutdown /s /t {timer}')
         enable_shutdown = True
         change_label(timer)
